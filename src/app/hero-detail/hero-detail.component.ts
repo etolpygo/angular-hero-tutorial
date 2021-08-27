@@ -17,9 +17,8 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  heroDetailChangeFn(newValue: any, param: any) {
-    console.log(newValue, param);
-    this.messageService.add(`HeroDetailComponent: Updated hero ${param} to ${newValue}`);
+  heroDetailChangeFn(event: any, param: any) {
+    this.messageService.add(`HeroDetailComponent: Updated hero ${param} to ${event.target.value}`);
   }
 
   @Input() hero?: Hero;
